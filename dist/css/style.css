@@ -15,7 +15,7 @@ footer {
   margin: 5px;
   padding: 5px;
   border-radius: 10px;
-  background-color: #2fffba;
+  background-color: #ffae00;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
@@ -62,19 +62,20 @@ footer {
   word-wrap: break-word;
   display: none;
   padding: 12px;
-  font-size: 14px;
-  background: #f971fd;
+  font-size: 16px;
+  background: #ff4931;
   border-radius: 10px;
   pointer-events: none;
 }
 
-.dot {
-  stroke: #16014e;
-  stroke-width: 2px;
+.bar {
+  fill: #ffae00;
+  stroke: white;
+  stroke-width: 0.5px;
 }
 
-.dot:hover {
-  fill: #f971fd;
+.bar:hover {
+  fill: #ff2f0a;
 }
 
 #title {

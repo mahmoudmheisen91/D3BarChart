@@ -1,8 +1,9 @@
 /* Global Variables */
-$mColor: rgb(47, 255, 186);
+$mColor: rgb(255, 174, 0);
 $sColor: rgb(22, 1, 78);
+$s1Color: rgb(255, 47, 10);
 $s2Color: rgba(0, 0, 0, 0.05);
-$s3Color: rgb(249, 113, 253);
+$s3Color: rgb(255, 73, 49);
 $ftSize: 1.5rem;
 
 /* Setup */
@@ -67,19 +68,20 @@ footer {
   word-wrap: break-word;
   display: none;
   padding: 12px;
-  font-size: 14px;
+  font-size: 16px;
   background: $s3Color;
   border-radius: 10px;
   pointer-events: none;
 }
 
-.dot {
-  stroke: $sColor;
-  stroke-width: 2px;
+.bar {
+  fill: $mColor;
+  stroke: white;
+  stroke-width: 0.5px;
 }
 
-.dot:hover {
-  fill: $s3Color;
+.bar:hover {
+  fill: $s1Color;
 }
 
 #title {
