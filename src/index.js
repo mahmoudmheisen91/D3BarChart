@@ -11,14 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       let data_set = parseData(data);
       drawScatterPlot(data_set);
-      console.log(data_set);
     })
     .catch(err => console.log(err));
 });
 
 /**
  * Parse data function
- * @param {object} data Object containing doping data of bicylce racing
+ * @param {object} data Object containing USA GDP data over years
  */
 let parseData = data => {
   let data_set = data.data;
@@ -46,18 +45,17 @@ let parseData = data => {
 };
 
 /**
- * Creates a scatterplot graph using D3.js
- * @param {object} data Object containing doping data of bicylce racing
- * data: {Year: Number, Time: Date, Doping: Boolean}
+ * Creates a bar chart graph using D3.js
+ * @param {object} data Object containing USA GDP data over years
  */
 let drawScatterPlot = data => {
   // Globals:
-  const width = 1200;
+  const width = 1400;
   const height = 500;
   const margin = {
-    top: 75,
+    top: 30,
     right: 0,
-    bottom: 0,
+    bottom: 30,
     left: 175
   };
   let timeFormat = d3.timeFormat("%Y");

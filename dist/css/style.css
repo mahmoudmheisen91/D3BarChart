@@ -15,7 +15,7 @@ footer {
   margin: 5px;
   padding: 5px;
   border-radius: 10px;
-  background-color: #ffae00;
+  background-color: #a0a0a0;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
@@ -52,8 +52,7 @@ footer {
 .grid-line {
   stroke: #16014e;
   stroke-dashoffset: 1px;
-  stroke-dasharray: 2 2;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 #tooltip {
@@ -69,7 +68,7 @@ footer {
 }
 
 .bar {
-  fill: #ffae00;
+  fill: #5a5a5a;
   stroke: white;
   stroke-width: 0.5px;
 }
@@ -82,16 +81,4 @@ footer {
   font-size: 1.5rem;
   font-weight: bold;
   text-anchor: middle;
-}
-
-#legend {
-  opacity: 1;
-}
-
-.legend-shape {
-  opacity: 1;
-}
-
-.legend-text {
-  font-weight: bold;
 }
