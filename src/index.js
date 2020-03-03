@@ -64,7 +64,7 @@ let drawScatterPlot = data => {
 
   // Scaleing:
   let xScale = d3
-    .scaleLinear()
+    .scaleTime()
     .domain([d3.min(data, d => d.Date), d3.max(data, d => d.Date)])
     .range([margin.right + margin.left, width - margin.right - margin.left]);
 
