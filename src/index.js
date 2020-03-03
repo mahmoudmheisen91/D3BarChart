@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       let data_set = parseData(data);
       drawScatterPlot(data_set);
+      console.log(data_set);
     })
     .catch(err => console.log(err));
 });
@@ -33,6 +34,7 @@ let parseData = data => {
         : "Q4";
 
     let obj = {
+      DateStr: item[0],
       Date: date,
       GDP: +item[1],
       Year: date.getFullYear(),
@@ -132,7 +134,7 @@ let drawScatterPlot = data => {
       .enter()
       .append("rect")
       .attr("class", "bar")
-      .attr("data-date", d => d.Date)
+      .attr("data-date", d => d.DateStr)
       .attr("data-gdp", d => d.GDP)
       .attr("x", d => xScale(d.Date))
       .attr("y", d => yScale(d.GDP))
@@ -141,7 +143,7 @@ let drawScatterPlot = data => {
       .attr("fill", "none")
       .on("mouseover", d => {
         toolTip.style("display", "block");
-        toolTip.attr("data-date", d.Date);
+        toolTip.attr("data-date", d.DateStr);
         toolTip
           .html(
             "Year: " +
