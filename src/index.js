@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => response.json())
     .then(data => {
       let data_set = parseData(data);
-      drawScatterPlot(data_set);
+      drawBarChart(data_set);
     })
     .catch(err => console.log(err));
 });
@@ -48,7 +48,7 @@ let parseData = data => {
  * Creates a bar chart graph using D3.js
  * @param {object} data Object containing USA GDP data over years
  */
-let drawScatterPlot = data => {
+let drawBarChart = data => {
   // Globals:
   const width = 1400;
   const height = 500;
@@ -125,7 +125,7 @@ let drawScatterPlot = data => {
     .attr("id", "tooltip");
 
   // Main PLot:
-  let scatterPlot = g =>
+  let barChart = g =>
     g
       .selectAll("rect")
       .data(data)
@@ -183,6 +183,6 @@ let drawScatterPlot = data => {
   svg.append("g").call(xAxis);
   svg.append("g").call(yAxis);
   svg.append("g").call(grid);
-  svg.append("g").call(scatterPlot);
+  svg.append("g").call(barChart);
   svg.append("g").call(title);
 };
